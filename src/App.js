@@ -1,29 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './css/style.css';
 import MyButton from './components/MyButton';
+import Header from './components/Header';
+import BigImg from './components/BigImg';
+import img from './imgs/jazz.jpg';
+import ArticleHeading from './components/ArticleHeading';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="header">Halloj</h1>
-        <p>
-          JS lesson <code>src/App.js</code> and save to reload.
-          <MyButton title="Tryck här" />
-          <MyButton title="eller här" />
-          <MyButton title="eller varför inte här" />
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Now
-        </a>
-      </header>
+    <div className='App'>
+      <Header title='Home page' />
+      <main className='site-wrapper'>
+        <article className='top-article'>
+          <BigImg url={img} />
+          <div className='top-article__content'>
+            <ArticleHeading title="Welcome" />
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <MyButton title='Book now' />
+          </div>
+
+        </article>
+      </main>
+
     </div>
   );
 }
